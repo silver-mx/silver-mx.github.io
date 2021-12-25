@@ -21,11 +21,14 @@
 title: silver-mx.github.io
 email: diego.nunez.mx@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A blog with technical articles covering topics of my interest
+  A blog with technical articles covering topics around software development.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://silver-mx.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: silver_mx_
 github_username:  silver-mx
+
+google_analytics: true
+show_downloads: false
 
 # Build settings
 theme: jekyll-theme-hacker
