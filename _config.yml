@@ -30,6 +30,15 @@ github_username:  silver-mx
 google_analytics: true
 show_downloads: false
 
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+    span:
+      line_numbers: false
+
+
 # Build settings
 theme: jekyll-theme-hacker
 plugins:

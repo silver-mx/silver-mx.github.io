@@ -2,3 +2,8 @@
 ---
 
 @import "{{ site.theme }}";
+
+// Override the font color for the code blocks
+pre {
+  color: #d0d0d0;
+}
