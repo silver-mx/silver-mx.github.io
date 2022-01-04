@@ -1,0 +1,20 @@
+{
+    "grammarly.overrides": [
+        {
+            "files": [
+                "**/_drafts/2021-12-25-disecting-angular-component-test.md"
+            ],
+            "config": {
+                "audience": "knowledgeable",
+                "dialect": "american",
+                "domain": "technical",
+                "emotions": [
+                    "optimistic"
+                ],
+                "goals": [
+                    "describe"
+                ]
+            }
+        }
+    ]
+}
