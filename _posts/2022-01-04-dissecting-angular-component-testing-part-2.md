@@ -5,9 +5,10 @@ date: 2022-01-04 17:03
 category: Angular
 author: silver-mx
 tags: [angular testing, component testing, jasmine]
-summary: This article shows how a component is unit tested with help of TestBed and ComponentFixture. 
+summary: This article shows how Angular Material's Component Harness is used to test a component. 
 ---
 
+This article shows how Angular Material's Component Harness is used to test a component
 
 Work in progress ....
 

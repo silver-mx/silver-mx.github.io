@@ -175,7 +175,7 @@ It is time to see the results of our test. The test should run without errors co
 
  `ng test --include=src/app/shipping/shipping.component.spec.ts`
 
- will tell Angular's CLI to compile the component and execute [Karma](https://karma-runner.github.io/latest/index.html), Angular's test runner. Short after, Karma opens a new browser window with the test results:
+ tells Angular's CLI to compile the component and execute [Karma](https://karma-runner.github.io/latest/index.html), Angular's test runner. Short after, Karma opens a new browser window with the test results:
 
  ![test results](/assets/images/first-spec-pass.png)
 
@@ -194,7 +194,7 @@ It is time to see the results of our test. The test should run without errors co
 <br/>
 
 ---
-:point_right: Check [Part 2 - Unit testing of Angular components](/angular/2022/01/04/dissecting-angular-component-testing-part-2.html) to see how the component is unit tested with help of `TestBed` and `ComponentFixture`.
+:point_right: Check [Part 2 - Unit testing of Angular components](/angular/2022/01/04/dissecting-angular-component-testing-part-2.html) to see how [Angular Material's Component Harness](https://material.angular.io/guide/using-component-harnesses) is used to unit test the shipping component.
 
 ---
 
