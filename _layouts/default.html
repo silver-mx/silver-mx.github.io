@@ -13,12 +13,37 @@
 
 <body>
 
+    <div class="sidenav" id="mySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        {% for item in site.data.navigation %}
+        <a href="{{ item.link }}">
+            {{ item.name }}
+        </a>
+        {% endfor %}
+
+        <div class="category-topic">Topics/
+            {% assign sortedCategories = site.categories | sort %}
+            <ul>
+                {% for category in sortedCategories %}
+                {% assign cat4url = category[0] | remove:' ' | downcase %}
+                <li>
+                    <a class="sidebar-nav-item" href="{{site.baseurl}}/category/{{cat4url}}">
+                        {{category[0]}}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+
     <header>
-        <div class="container">
+        <span style="font-size:45px;cursor:pointer" onclick="openNav()">&#9776</span>
+        <!--div class="container">
             <section id="navigation">
                 {% include navigation.html %}
             </section>
-        </div>
+        </div-->
         <div class="container">
             <a id="a-title" href="{{ '/' | relative_url }}">
                 <h1>{{ site.title | default: site.github.repository_name }}</h1>
@@ -43,6 +68,16 @@
             {{ content }}
         </section>
     </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
 </body>
 
 </html>
