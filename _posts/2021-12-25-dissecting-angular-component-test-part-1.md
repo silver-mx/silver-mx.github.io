@@ -114,13 +114,13 @@ The lines below `describe('ShippingComponent', () => {` show the declarations of
 `beforeEach` runs initialization that applies to all specs. The logic makes use of `TestBed`, a testing utility provided by Angular for constructing dynamically a test module that emulates an `@NgModule`. `TestBed` helps us to configure the environment to unit test a component, and to inject services and other dependencies required by the tested component (see [TestBed docs](https://angular.io/guide/testing-services#angular-testbed)).
 
 `TestBed.configureTestingModule({...})` creates a testing module to test our component. Angular applications are modular and contain at least one module(see [NgModules](https://angular.io/guide/architecture-modules)). Modules serve as containers to include components, service providers, among others. A testing module normally receives the following metadata:
-  * `declarations`: Defines the components, directives, or pipes belonging to the testing module. Normally you include the component under testing, `ShippingComponent` in our example.
+  * `declarations`: Defines the components, directives, and pipes belonging to the testing module defined under `configureTestingModule()`. Normally you include the component under testing, `ShippingComponent` in our example, but other classes can be included if needed.
   <br/>
 
-  * `imports`: Lists other modules whose exported classes are needed to access and interact with the component's [template](https://angular.io/guide/architecture-components#templates-and-views).
+  * `imports`: Lists other modules whose exported classes are needed by the tested component. An example is [Angular Material's](https://material.angular.io/components/categories)'s modules, which are imported when the tested component uses UI components like `MatSelect` , `MatInput`, `MatButton` in its [template](https://angular.io/guide/architecture-components#templates-and-views).
   <br/>
 
-  * `providers`: Lists creators of the services needed for our testing modules. `TestBed` injects such services into the tested component via dependency injection.
+  * `providers`: Lists creators of services not exported by modules listed in `imports`, and that are required by the tested component. `TestBed` injects such services into the tested component via dependency injection. An example is a [*spy*](https://jasmine.github.io/tutorials/your_first_suite#section-Spies) that gets provided/injected into the component for stubbing responses and isolating the component's testing.
   
 ---
 :exclamation: The `imports` and `providers` sections are added in the second part, where we set the `ShippingComponent`'s dependencies.
@@ -150,7 +150,7 @@ Once again we find a `beforeEach` block, but this time it receives a synchronous
 
 Further, `ComponentFixture` has [`DebugElement`](https://angular.io/guide/testing-components-basics#debugelement), which helps us to access and interact with the HTML elements declared in the component's template.
 
-Finally, [`fixture.detectChanges()`](https://angular.io/guide/testing-components-scenarios#detectchanges) tells the `TestBed` to perform data binding. [Data binding](https://angular.io/guide/binding-syntax#binding-syntax) means keeping the page up-to-date according to the application's state. ***Note:*** normally, Angular performs change detection automatically when running an application. However,  when testing with `TestBed`, change detection needs to be triggered manually to allow the developer to perform checks or assertions about the application's state before the binding occurrs.
+Finally, [`fixture.detectChanges()`](https://angular.io/guide/testing-components-scenarios#detectchanges) tells the `TestBed` to perform data binding. [Data binding](https://angular.io/guide/binding-syntax#binding-syntax) means keeping the page up-to-date according to the application's state. ***Note:*** normally, Angular performs change detection automatically when running an application. However,  when testing with `TestBed`, change detection needs to be triggered manually to allow the developer to perform checks or assertions about the application's state before the binding occurs.
 
 <br/>
 ### Verifying the component instance (lines 21-23)
