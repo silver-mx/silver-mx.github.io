@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Angular Component Testing 1 - Basic Structure
+title: Angular Component Testing 1 - The Basics
 date: 2021-12-25 10:00
 category: Angular
 author: silver-mx
@@ -10,10 +10,10 @@ summary: This article explains the basic structure that composes a unit test for
 
 Recently I started writing automated tests in Angular, and something that bothered me was that I understood parts but not the test as a whole. This article gives a walkthrough of the skeleton of an empty component test as it includes important concepts that support more complex tests. Hope it helps :slightly_smiling_face: 
 
----
-:point_right: Check [Part 2 - Unit testing of Angular components](/angular/2022/01/04/dissecting-angular-component-testing-part-2.html) to see how the component is unit tested with help of `TestBed` and `ComponentFixture`.
+[//]: # (---)
+[//]: # (:point_right: Check [Part 2 - Unit testing of Angular components](/angular/2022/01/04/dissecting-angular-component-testing-part-2.html) to see how [Angular Material's Component Harness](https://material.angular.io/guide/using-component-harnesses) is used to unit test the shipping component.)
 
----
+[//]: # (---)
 
 <!-- TOC -->
 
@@ -193,10 +193,10 @@ It is time to see the results of our test. The test should run without errors co
 
 <br/>
 
----
-:point_right: Check [Part 2 - Unit testing of Angular components](/angular/2022/01/04/dissecting-angular-component-testing-part-2.html) to see how [Angular Material's Component Harness](https://material.angular.io/guide/using-component-harnesses) is used to unit test the shipping component.
+[//]: # (---)
+[//]: # (:point_right: Check [Part 2 - Unit testing of Angular components](/angular/2022/01/04/dissecting-angular-component-testing-part-2.html) to see how [Angular Material's Component Harness](https://material.angular.io/guide/using-component-harnesses) is used to unit test the shipping component.)
 
----
+[//]: # (---)
 
 
 
